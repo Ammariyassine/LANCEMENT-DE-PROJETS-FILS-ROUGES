@@ -1,0 +1,35 @@
+@startuml
+
+class Guild {
+    +id: int
+    +name: String
+    +leader: String
+    +createGuild(): void
+}
+
+class Character {
+    +id: int
+    +name: String
+    +level: int
+    +guildId: int
+    +addCharacter(): void
+}
+
+class Member {
+    +id: int
+    +name: String
+    +characters: List<Character>
+}
+
+class Leader {
+    +id: int
+    +name: String
+    +createGuild(): void
+    +addCharacter(): void
+}
+
+Guild "1" --> "many" Character : contains
+Member "1" --> "many" Character : owns
+Leader --|> Member
+
+@enduml
