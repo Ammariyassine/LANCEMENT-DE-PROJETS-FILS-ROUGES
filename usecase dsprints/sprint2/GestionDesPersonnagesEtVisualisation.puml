@@ -1,0 +1,14 @@
+@startuml
+actor Leader
+actor Member
+
+usecase "Add Character" as UC3
+usecase "Remove Character" as UC4
+usecase "View Characters" as UC5
+
+Leader -- UC3
+Leader -- UC4
+Leader -- UC5
+Member -- UC3
+Member -- UC5
+@enduml

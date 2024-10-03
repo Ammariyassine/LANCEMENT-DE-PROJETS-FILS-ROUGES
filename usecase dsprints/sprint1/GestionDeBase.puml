@@ -1,0 +1,11 @@
+@startuml
+actor Leader
+actor Member
+
+usecase "Create Guild" as UC1
+usecase "Add Character" as UC3
+
+Leader -- UC1
+Leader -- UC3
+Member -- UC3
+@enduml

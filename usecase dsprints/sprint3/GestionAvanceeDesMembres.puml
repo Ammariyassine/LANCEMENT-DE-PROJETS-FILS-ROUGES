@@ -1,0 +1,13 @@
+@startuml
+actor Leader
+actor Member
+
+usecase "Manage Members" as UC2
+usecase "Edit Guide" as UC6
+usecase "View Guide" as UC7
+
+Leader -- UC2
+Leader -- UC6
+Leader -- UC7
+Member -- UC7
+@enduml
